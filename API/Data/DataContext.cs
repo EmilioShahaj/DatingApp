@@ -40,7 +40,7 @@ namespace API.Data
                 .HasForeignKey(r => r.RoleId)
                 .IsRequired();
 
-            builder.Entity<UserLike>()
+             builder.Entity<UserLike>()
                 .HasKey(k => new { k.SourceUserId, k.LikedUserId });
             builder.Entity<UserLike>()
                 .HasOne(s => s.SourceUser)
